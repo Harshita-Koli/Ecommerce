@@ -5,6 +5,6 @@ public class BadApiRequest extends RuntimeException{
         super(message);
     }
     public BadApiRequest(){
-        super("Bad Request !!!");
+//        super("Bad Request !!!");
     }
 }
