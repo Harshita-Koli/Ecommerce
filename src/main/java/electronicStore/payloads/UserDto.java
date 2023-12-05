@@ -36,6 +36,6 @@ public class UserDto {
     private String about;
 
     //    custom-validation
-//    @ImageNameValid
+   @ImageNameValid
     private String imageName;
 }
