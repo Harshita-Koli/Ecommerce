@@ -1,4 +1,4 @@
-package electronicStore.Constanst;
+package electronicStore.constanst;
 
 public class AppConstanst {
     public static final String NOT_FOUND="Resource Not Found On Server :";
