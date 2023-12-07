@@ -77,10 +77,10 @@ public class UserServiceImpl implements UserService {
 
     //    get all users
     @Override
-    public pagebleResponse getAllUsers(Integer pageNumber, Integer pageSize, String sortBy, String direction) {
+    public pagebleResponse getAllUsers(Integer pageNumber, Integer pageSize, String sortBy, String sortDirection) {
 
         log.info("Entering the Dao call for getAll the users ");
-        Sort desc = (direction.equalsIgnoreCase("desc")) ? (Sort.by(sortBy).descending()) : (Sort.by(sortBy).ascending());
+        Sort desc = (sortDirection.equalsIgnoreCase("desc")) ? (Sort.by(sortBy).descending()) : (Sort.by(sortBy).ascending());
         PageRequest pr = PageRequest.of(pageNumber, pageSize, desc);
         Page<User> pages = this.userRepo.findAll(pr);
         List<User> users = pages.getContent();
